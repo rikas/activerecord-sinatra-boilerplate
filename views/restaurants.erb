@@ -1,0 +1,13 @@
+<h1>List of restaurants</h1>
+<h2>We have <%= Restaurant.count %> restaurants</h2>
+
+<ol>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <a href="<%= restaurant.url %>"><%= restaurant.name %></a>
+      (<strong>rating: <%= restaurant.rating%></strong>)
+    </li>
+  <% end %>
+</ol>
+
+<p><%= Date.today + 1 %></p>
